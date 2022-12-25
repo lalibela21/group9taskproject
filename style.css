@@ -1,19 +1,31 @@
 body {
     font-family: sans-serif;
     margin: 0 50px;
-    background-color: #e5e5e5;
+    background-image: url(./Background\ IMG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow: hidden;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+   
+
 }
+
+.header{
+ font-size: 30px;
+ font-weight: bold; 
+ font-family: 'Pacifico', cursive;
+ color:rgb(23,102,171)
+}
+
 
 .app {
     width: 500px;
-    height: 500px;
-    border: 5px solid rgba(171, 134, 134, 0.349);
-    border-radius: 8px;
+    height: 600px;
+    border: 5px solid  rgb(23,102,171);
+    border-radius: 25px;
     padding: 15px;
     background-color: #fff;
     overflow-y: scroll;
@@ -25,12 +37,14 @@ body {
 
 #addNew {
     display: flex;
-    background-color: rgba(171, 134, 134, 0.349);
+    background-color: rgb(23,102,171);
     align-items: center;
     justify-content: space-between;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    color: #fff;
+    font-family: 'Unbounded', cursive; 
 }
 
 .fa-plus {
@@ -47,11 +61,13 @@ body {
 
 #tasks div {
     background-color: #e2eede;
-    background-color: rgba(171, 134, 134, 0.349);
+    background-color: rgb(23,102,171);
+    color: #fff;
     padding: 5px;
     border-radius: 6px;
     display: grid;
     gap: 4px;
+    /* font-family: 'Unbounded', cursive;  */
 }
 
 #tasks div.options {
@@ -63,7 +79,17 @@ body {
 #tasks div.options i {
     cursor: pointer;
     font-size: 0.5rem;
-}
+
+} 
+
+.taskhead{
+    font-size: 20px;
+    font-weight: bold; 
+    font-family: 'Pacifico', cursive;
+    color:rgb(23,102,171);
+    text-transform: uppercase;
+   }
+   
 
 #msg {
     color: red;
