@@ -53,10 +53,16 @@ body {
     border-radius: 3px;
 }
 
+.far, .fas {
+    font-size: 1.5rem;
+}
+
+
 #tasks {
-    display: grid;
+    /* changed display to flex-box to keep margin at right of task card */
+    display: flex-box;
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 16px;
 }
 
 #tasks div {
@@ -65,8 +71,11 @@ body {
     color: #fff;
     padding: 5px;
     border-radius: 6px;
+    /* added missing margin-bottom */
+    margin-bottom: 15px;
     display: grid;
     gap: 4px;
+    
     /* font-family: 'Unbounded', cursive;  */
 }
 
@@ -78,8 +87,6 @@ body {
 
 #tasks div.options i {
     cursor: pointer;
-    font-size: 0.5rem;
-
 } 
 
 .taskhead{
@@ -90,7 +97,6 @@ body {
     text-transform: uppercase;
    }
    
-
 #msg {
     color: red;
     padding-top: 10px;
