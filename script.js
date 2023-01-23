@@ -6,6 +6,9 @@ let msg = document.getElementById('msg');
 let tasks = document.getElementById('tasks');
 let add = document.getElementById('add');
 
+let assignTo = document.getElementById('assignTo');
+
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     formValidation();
@@ -36,6 +39,7 @@ let acceptData = () => {
         text: textInput.value,
         date: dateInput.value,
         description: textarea.value,
+        assignTo: assignTo.value
     });
 
     localStorage.setItem('data', JSON.stringify(data));
@@ -50,6 +54,7 @@ let createTasks = () => {
         return (tasks.innerHTML += ` 
             <div id=${y}>
                 <span class="fw-bold text-uppercase">${x.text}</span>
+                <span class="small ">Assign to: ${x.assignTo}</span>
                 <span class="small ">${x.date}</span>
                     <p>${x.description}</p>
     
@@ -78,6 +83,8 @@ let editTask = (e) => {
     textInput.value = selectedTask.children[0].innerHTML;
     dateInput.value = selectedTask.children[1].innerHTML;
     textarea.value = selectedTask.children[2].innerHTML;
+    assignTo.value = selectedTask.children[3].innerHTML;
+
 
     deleteTask(e);
 }
@@ -86,6 +93,7 @@ let resetForm = () => {
     textInput.value = '';
     dateInput.value = '';
     textarea.value = '';
+    assignTo.value = '';
 };
 
 (() => {
